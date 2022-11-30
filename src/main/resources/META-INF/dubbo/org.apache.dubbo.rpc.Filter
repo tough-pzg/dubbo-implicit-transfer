@@ -1,0 +1,1 @@
+dubbo-implicit-transfer-filter=com.pzg.dubbo.implicit.transfer.filter.DubboContextFilter

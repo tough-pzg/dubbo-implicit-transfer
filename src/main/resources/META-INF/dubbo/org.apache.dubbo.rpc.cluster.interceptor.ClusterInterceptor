@@ -1,0 +1,1 @@
+dubbo-implicit-transfer-context=com.pzg.dubbo.implicit.transfer.interceptor.DubboConsumerContextClusterInterceptor
