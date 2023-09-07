@@ -1,4 +1,15 @@
 # Getting Started
+###前序知识
+```
+Dubbo远程调用的执行流程：
+1.发起调用前，先执行 ConsumerContextClusterInterceptor 的 before方法 （自定义的Interceptor.before 会在默认 Interceptor.before  后执行）
+2.执行 消费方Filter invoke方法
+3.执行 服务方Filter invoke方法
+4.远程调用目标方法
+5.执行 ConsumerContextClusterInterceptor 的 after方法 （自定义的Interceptor.after 会在默认 Interceptor.after  前执行）
+所以说，ConsumerContextClusterInterceptor 是执行在外层的。
+注意：一个线程中 发起远程调用前后的 RpcContext 不是一个对象
+```
 
 ### Dubbo 服务间调用隐式传参
 ```
